@@ -1,18 +1,15 @@
-import { RoomProvider } from "../../liveblocks.config";
 import { ClientSideSuspense } from "@liveblocks/react";
-import { Presence } from "../../liveblocks.config";
 import React from "react";
+import { RoomProvider } from "../../liveblocks.config";
+import { Presence } from "../../liveblocks.config";
 
-type Props = {
-  children: React.ReactNode;
-};
-
-const LiveBlocksWrapper = ({ children }: Props) => {
+export const LiveBlocksWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const getInitialPresence = (roomId: string): Presence => {
     // roomIdに対応する初期Presenceを返す
-    return {} as Presence; // 適切な初期値を返す
+    return { cursor: null }; // 適切な初期値を返す
   };
-
   return (
     <RoomProvider id="my-room" initialPresence={getInitialPresence}>
       <ClientSideSuspense fallback="Loading…">
@@ -21,5 +18,3 @@ const LiveBlocksWrapper = ({ children }: Props) => {
     </RoomProvider>
   );
 };
-
-export default LiveBlocksWrapper;

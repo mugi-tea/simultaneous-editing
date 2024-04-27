@@ -1,6 +1,6 @@
-import LiveBlocksWrapper from "./LiveBlocksWrapper";
-import CursorSyncWrapper from "./CursorSyncWrapper";
-import Editor from "./Editor";
+import { LiveBlocksWrapper } from "@/components/LiveBlocksWrapper";
+import { CursorSyncWrapper } from "@/components/CursorSyncWrapper";
+import { Editor } from "@/components/Editor";
 
 export default function Page() {
   return (

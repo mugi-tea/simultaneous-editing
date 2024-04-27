@@ -1,5 +1,3 @@
-"use client";
-
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
@@ -31,7 +29,7 @@ function initialEditorState(editor: LexicalEditor): void {
   root.append(paragraph);
 }
 
-const Editor = () => {
+export const Editor: React.FC = () => {
   const room = useRoom();
   const userInfo = useSelf((me) => me.info);
 
@@ -85,5 +83,3 @@ const Editor = () => {
     </div>
   );
 };
-
-export default Editor;
