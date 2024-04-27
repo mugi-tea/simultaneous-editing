@@ -19,6 +19,7 @@ export const CursorSyncWrapper: React.FC<{ children: React.ReactNode }> = (
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       className={"h-screen w-screen"}
+      style={{ height: "100vh" }}
     >
       {others
         .filter((other) => other.presence.cursor !== null)
