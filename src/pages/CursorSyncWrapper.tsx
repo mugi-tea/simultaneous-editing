@@ -1,12 +1,12 @@
 import { useMyPresence, useOthers } from "../../liveblocks.config";
 import React from "react";
-import { Cursor } from "./Cursor";
+import Cursor from "./Cursor";
 
 type Props = {
   children: React.ReactNode;
 };
 
-export const CursorSyncWrapper = ({ children }: Props) => {
+const CursorSyncWrapper = ({ children }: Props) => {
   const [myPresence, updateMyPresence] = useMyPresence();
   const others = useOthers();
   const handlePointerMove = (e: any) => {
@@ -38,3 +38,5 @@ export const CursorSyncWrapper = ({ children }: Props) => {
     </div>
   );
 };
+
+export default CursorSyncWrapper;

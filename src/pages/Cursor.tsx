@@ -8,7 +8,7 @@ type Props = {
   image: string;
 };
 
-export const Cursor = ({ x, y, color, name, image }: Props) => {
+const Cursor = ({ x, y, color, name, image }: Props) => {
   return (
     <svg
       style={{
@@ -30,3 +30,5 @@ export const Cursor = ({ x, y, color, name, image }: Props) => {
     </svg>
   );
 };
+
+export default Cursor;

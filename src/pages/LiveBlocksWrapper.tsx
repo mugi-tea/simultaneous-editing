@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const LiveBlocksWrapper = ({ children }: Props) => {
+const LiveBlocksWrapper = ({ children }: Props) => {
   const getInitialPresence = (roomId: string): Presence => {
     // roomIdに対応する初期Presenceを返す
     return {} as Presence; // 適切な初期値を返す
@@ -21,3 +21,5 @@ export const LiveBlocksWrapper = ({ children }: Props) => {
     </RoomProvider>
   );
 };
+
+export default LiveBlocksWrapper;

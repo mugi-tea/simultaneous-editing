@@ -31,7 +31,7 @@ function initialEditorState(editor: LexicalEditor): void {
   root.append(paragraph);
 }
 
-export const Editor = () => {
+const Editor = () => {
   const room = useRoom();
   const userInfo = useSelf((me) => me.info);
 
@@ -85,3 +85,5 @@ export const Editor = () => {
     </div>
   );
 };
+
+export default Editor;
